@@ -1,0 +1,15 @@
+name: 要望
+description: こうなってほしい、を伝える
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        個人用に作っているものなので、反映できるとは限りません。あらかじめご了承ください。
+  - type: textarea
+    id: idea
+    attributes:
+      label: ほしいこと
+      description: 何に困っていて、どうなると嬉しいか
+    validations:
+      required: true

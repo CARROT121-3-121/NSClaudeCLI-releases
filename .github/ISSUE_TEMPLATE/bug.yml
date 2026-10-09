@@ -1,0 +1,37 @@
+name: 不具合の報告
+description: 動かない・おかしいところを知らせる
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        個人用に作っているものなので、反映できるとは限りません。あらかじめご了承ください。
+  - type: input
+    id: version
+    attributes:
+      label: 版
+      description: Releases から入れた版（例 v0.1.0）
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: OS
+      options: [Windows, macOS]
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: 何が起きたか
+      description: どうしたら、どうなったか。本来どうなってほしかったか
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: 控え（あれば）
+      description: |
+        Windows は %APPDATA%\ClaudeSessionManager\log.txt、macOS は ~/Library/Application Support/ClaudeSessionManager/log.txt の該当しそうな部分。
+        トークンや個人のフォルダ名が含まれていないか確かめてから貼ってください
+      render: text
