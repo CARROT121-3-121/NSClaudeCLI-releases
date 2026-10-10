@@ -98,8 +98,8 @@
 
 | | |
 |---|---|
-| Windows | `%APPDATA%\ClaudeSessionManager` |
-| macOS | `~/Library/Application Support/ClaudeSessionManager` |
+| Windows | `%APPDATA%\NSClaudeCLI` |
+| macOS | `~/Library/Application Support/NSClaudeCLI` |
 
 > [!WARNING]
 > Discord のトークンなどもここに保存されます。フォルダごと人に渡さないでください。
