@@ -80,7 +80,12 @@
 
 1. [最新版](../../releases/latest) から **`NSClaudeCLI-mac.zip`** を落として展開
 2. **`NSClaudeCLI.app`** を「アプリケーション」へ移す
-3. 初回だけ **右クリック →「開く」**（署名していないため、ダブルクリックでは止められます）
+3. 「ターミナル」で次のコマンドを実行（**これをしないと起動しません**）
+   ```sh
+   xattr -rc /Applications/NSClaudeCLI.app
+   ```
+   署名していないため、落としたアプリには macOS が「隔離」の印を付け、起動を止めます。このコマンドで印を外します。zip から入れ直したときも、もう一度実行してください
+4. 「アプリケーション」の **NSClaudeCLI** から起動
 
 > [!NOTE]
 > Mac 版は Intel（x64）向けです。Apple Silicon の Mac では Rosetta 2 と、x64 版の .NET ランタイムが要ります。
